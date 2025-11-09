@@ -2,6 +2,7 @@ print('========================')
 print('*args exercise') #*args is like variable arguments
 def five_percent_of_all(*args):
     print(args) #(1, 2, 3, 4, 5)
+    print(type(args)) #<class 'tuple'>
     return sum(args) * 0.05
 
 print(five_percent_of_all(1,2,3,4,5)) #0.75
