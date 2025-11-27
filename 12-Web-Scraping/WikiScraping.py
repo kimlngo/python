@@ -16,6 +16,7 @@ image_get = requests.get("https://en.wikipedia.org/wiki/Deep_Blue_(chess_compute
 soup = bs4.BeautifulSoup(image_get.text, "lxml")
 
 computer = soup.select('.mw-file-element')[1]
+print(type(computer))
 print(computer['src'])
 image_link = 'https:' + computer['src']
 image = requests.get(image_link, headers=headers)
